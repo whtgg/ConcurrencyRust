@@ -1,6 +1,15 @@
 #![feature(sync_unsafe_cell)]
+#![feature(type_alias_impl_trait)]
+#![feature(once_cell)]
 
 use std::{sync::{Arc, Barrier, atomic::{ Ordering, AtomicUsize}, Condvar, Mutex, Once, RwLock, mpsc::{channel, sync_channel}}, thread, time, hint, cell::SyncUnsafeCell};
+
+pub mod async_trait_demo;
+pub mod futures_demo;
+pub mod cond_var;
+pub mod runtime;
+pub mod smart;
+pub mod gat;
 
 /// barrier 会阻塞为序列执行
 pub fn p_barrier() {
