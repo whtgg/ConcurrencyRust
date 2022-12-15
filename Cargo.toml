@@ -2,5 +2,7 @@
 members = [
     "thread",
     "pool",
-    "primive"
+    "primive",
+    "ftokio",
+    "frayon"
 ]
